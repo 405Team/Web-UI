@@ -176,6 +176,8 @@ $headerContentHeight: $headerHeight - $headerTopHeight;
 $logoWidth: 225px;
 $logoHeight: 62px;
 $navWidth: 965px;
+$textColor:#fbc85b;
+// $bgColor:
 
 ol,ul{
   display: inline-block;
@@ -201,11 +203,11 @@ ol,ul{
 }
 .top_nav_l>ul>li, .top_nav_r>ul>li {
   float: left;
-  color:#fbc85b;
+  color: $textColor;
   line-height: $headerTopHeight;
 }
 .top_nav_l>ul>li>a, .top_nav_r>ul>li>a {
-  color:#fbc85b;text-decoration:none;
+  color:$textColor;text-decoration:none;
 }
 .top_nav_l>ul>li>a:hover, .top_nav_r>ul>li>a:hover{
   /*color:#fbc85b;*/
@@ -282,13 +284,13 @@ ol,ul{
   content:'▲';position:absolute;bottom:99.5%;left:0;right:0;color:#ffd053;line-height:normal
 }
 .subnav li,.subnav li>a{
-  color:#fff;font-size:12px;line-height:30px;text-decoration:none
+  color:$textColor;font-size:12px;line-height:30px;text-decoration:none
 }
 // .subnav li:first-child{
 //   color:red;font-weight:bold
 // }
 .subnav li>a:hover{
-  color:#ffd954;
+  color:white;
   cursor:pointer;
 }
 </style>

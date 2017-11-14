@@ -43,7 +43,7 @@ $footerHeight: 350px;
 }
 #footer-info>li{
   position:relative;float:left;
-  width:100px;
+  width:120px;
   height:45px;
   text-align: left;
   color:#f5ad90;
@@ -62,12 +62,12 @@ $footerHeight: 350px;
   background-position-x:25px;
 }
 #footer-info>li.mail{
-  margin-left: 120px;
+  margin-left: 100px;
   padding-left: 72px;
   background-image:url('../assets/contact_bg_email.png');background-repeat:no-repeat;background-position:left center;
 }
 #footer-info>li.qq{
-  margin-left: 120px;
+  margin-left: 100px;
   padding-left: 50px;
   background-image:url('../assets/contact_bg_qq.png');background-repeat:no-repeat;background-position:left center;
 }

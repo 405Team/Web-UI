@@ -33,6 +33,7 @@
 
           <el-form-item>
             <el-button type="primary" @click="onLogin('loginForm')" style="width:210px;">立即登录</el-button>
+            <el-button style="float:right; padding:3px 0" type="text" @click="onRegister">还没有账号? 立即注册</el-button>
           </el-form-item>
         </el-form>
       </div>

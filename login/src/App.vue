@@ -22,9 +22,9 @@
               <div id="hot-news">
                 <!-- <marquee id="affiche" align="left" behavior="scroll" bgcolor="#FF0000" direction="up" height="300" width="200" hspace="50"
                 vspace="20" loop="-1" scrollamount="10" scrolldelay="100" onMouseOut="this.start()" onMouseOver="this.stop()"> -->
-                <marquee hspace="0" vspace="0" align="left" behavior="scroll" height="40" width="930" bgcolor="red" direction="left"
-                loop="-1" scrollamount="10" scrolldelay="100" onMouseOut="this.start()" onMouseOver="this.stop()">
-                {{ $WebInfo.news.prompt }}
+                <marquee align="left" height="40" width="930" direction="left"
+                 scrollamount="15" scrolldelay="200" onMouseOut="this.start()" onMouseOver="this.stop()">
+                <a style="color:#fbc85b;line-height:40px;" @click="onShowDetailNews">{{ $WebInfo.news.prompt }}</a>
                 </marquee>
                 <!-- <a href="javascript: void(0)" ng-click="newsClick()">{{ $WebInfo.news.prompt }}</a> -->
               </div>
@@ -71,6 +71,12 @@ export default {
     // }
   },
   methods: {
+    onShowDetailNews: function() {
+      this.$alert(this.$WebInfo.news.formatPrompt, 'News', {
+         dangerouslyUseHTMLString: true,
+        confirmButtonText: '知道了',
+      });
+    },
     onChildLogin: function({error, errorMsg}) {
       console.log(0);
       if (!error) {
@@ -123,9 +129,22 @@ $footerHeight: 350px;
     padding: 30px 0 0 5px;
     width: 235px;
     height: 242px;
-    // border: 1px solid #2f1c20;
     background:url('./assets/login_bg.png') no-repeat center;
     float: right;
+
+    .el-input__inner{
+      height: 34px;
+    }
+    .el-form-item__error{
+      padding-top: 0;
+    }
+    .el-form-item{
+      margin-bottom: 14px;
+    }
+
+    // .el-form-item.is-error .el-input__inner, .el-form-item.is-error .el-input__inner:focus, .el-form-item.is-error .el-textarea__inner, .el-form-item.is-error .el-textarea__inner:focus, .el-message-box__input input.invalid, .el-message-box__input input.invalid:focus{
+    //   border: 0 none;
+    // }
   }
 }
 
