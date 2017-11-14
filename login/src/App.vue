@@ -15,30 +15,9 @@
     </div>
     <div class="footer">
       <div class="wrapper">
-        <el-footer class="redBorder">Footer</el-footer>
+        <footerView></footerView>
       </div>
     </div>
-<!--
-    <div class="main-content redBorder">
-      <el-container>
-        <el-header height="120px" class="redBorder" style="padding:0;">
-          <headerView :permission="1"></headerView>
-        </el-header>
-      </el-container>
-      <div>
-        <el-container>
-          <el-main class="main redBorder">
-            <div style="float:right;">
-              <userInfoView v-if='isLogin'></userInfoView>
-              <loginView v-else v-on:login="onChildLogin"></loginView>
-            </div>
-          </el-main>
-
-
-          <el-footer class="redBorder">Footer</el-footer>
-        </el-container>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -48,11 +27,12 @@
 import headerView from './components/header.vue'
 import loginView from './components/login.vue'
 import userInfoView from './components/userInfo.vue'
+import footerView from './components/footer.vue'
 
 import qs from 'qs'
 export default {
   components:{
-    headerView, loginView, userInfoView
+    headerView, loginView, userInfoView, footerView
   },
   data() {
     return {
@@ -90,7 +70,8 @@ export default {
 <style lang="scss">
 $wrapperWidth: 1000px;
 $headerHeight: 120px;
-$footerHeight: 400px;
+$mainHeight: 800px;
+$footerHeight: 350px;
 
 #app {
   background:#2f1c20;
@@ -102,14 +83,14 @@ $footerHeight: 400px;
   margin: 0 auto;
 }
 .header {
-  height: $headerHeight;
   padding: 0;
+  height: $headerHeight;
 }
 .main {
   padding: 0;
   z-index:10;
   width:100%;
-  height: 1000px;
+  height: $mainHeight;
   background:url('./assets/main_bg.png') repeat-x center top;
 }
 .login-content {
@@ -121,18 +102,10 @@ $footerHeight: 400px;
   float: right;
 }
 .footer {
-
+  padding: 0;
+  z-index:10;
+  width:100%;
+  height: $footerHeight;
+  background:#221316 url('./assets/footer_bg.jpg') no-repeat center top;
 }
-
-/*.main-content {
-  position: relative;
-  width: 1200px;
-  margin: 0 auto;
-}
-.main {
-  background:url('./assets/main_bg.png') no-repeat center;
-}
-.redBorder {
-  border: 1px solid red;
-}*/
 </style>

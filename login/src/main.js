@@ -12,6 +12,9 @@ axios.defaults.withCredentials = true
 Vue.prototype.$http = axios
 // Object.assign(Vue, {$http: axios})
 
+import CommonMethods from './CommonMethods.js'
+Vue.use(CommonMethods)
+
 Array.prototype.indexOf = function(val) {
    for (let i = 0; i < this.length; i++) {
        if (this[i] == val) return i;
